@@ -1,0 +1,202 @@
+/*Importando fontes externas da google*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --primaria: #11091A;
+    --secundaria: #2F2F4D;
+    --tercearia: #626970;
+    --quaternaria: #626970;
+    --quintaria: #BAB195;
+    --sextaria: #E8D18E;
+
+}
+
+/*tirando configurações padrões do navegador para estilização propria*/
+* {
+    box-sizing: border-box;
+    color: var(--sextaria);
+    font-family: "Lexend", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--primaria);
+    background: linear-gradient(45deg, var(--primaria) 52%, var(--sextaria) 100%);
+}
+
+/*estilização da minha div pai de classe login*/
+.login {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+/*estilização da minha div filha da esquerda com o texto*/
+.login_esquerda {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 50vw;
+}
+
+.mat {
+    height: 40vh;
+    width: 35vw;
+}
+
+/*estilização da minha div filha da direita com o bloco de login*/
+.login_direita {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 50vw;
+}
+
+.login_direita_card {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secundaria);
+    background: linear-gradient(45deg, var(--primaria) 0%, var(--secundaria) 15%, #494970 100%);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    padding: 30px 35px;
+    text-align: center;
+    width: 60%;
+}
+
+.titulo_card>h1 {
+    font-size: 60px;
+}
+
+.text {
+    font-size: 20px;
+    margin-top: 5%;
+    padding: 5% 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text >label {
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+
+}
+
+/*estilização de todos os input do meu css*/
+.text>input {
+    background-color: var(--primaria);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+}
+
+/*estilização do meu botao com classe de mesmo nome filha da minha div filha da direita*/
+.login_direita_card>.botao {
+    height: 8%;
+    margin-top: 10%;
+    width: 40%;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter {
+    background-color: var(--quintaria);
+    border: none;
+    border-radius: 5px;
+    color: var(--primaria);
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 10px 40px -12px var(--sextaria);
+}
+
+@media only screen and (max-width: 950px) {
+    .login_direita_card {
+        width: 80%;
+    }
+
+    .titulo_card {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background: var(--primaria);
+        background: linear-gradient(45deg, var(--primaria) 20%, var(--sextaria) 100%);
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login_esquerda {
+        height: 25vh;
+        width: 100vw;
+    }
+
+    .mat {
+        height: 100%;
+        width: 100%;
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .login_direita {
+        height: 75vh;
+        width: 100vw;
+    }
+
+    .login_direita_card {
+        width: 70%;
+        height: 70%;
+        justify-content: start;
+    }
+
+    .titulo_card>h1 {
+        font-size: 5vh;
+        margin-bottom: 3vh;
+    }
+
+    .text {
+        margin: 3vh 0vh 2vh 0vh;
+    }
+
+    .text>label {
+        font-size: 22px;
+        height: 25%;
+    }
+
+    .text>input {
+        border: none;
+        height: 70%;
+        padding: 1%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .botao {
+        height: 5vh;
+    }
+}
